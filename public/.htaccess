@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+DirectorySlash Off
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+    RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_URI} (.+)/$
+	RewriteRule ^ %1 [R=301,L]
+
+	# Remove .php to no extension
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+	RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+	ErrorDocument 404 /404.php
+	ErrorDocument 500 /500.php
+	Redirect /index /
+</IfModule>
