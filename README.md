@@ -1,5 +1,10 @@
 # PHP---Blog-Admin-Panel
-Demo of simple blog admin panel
+Demo project
+
+Requirements
+- Apache
+- MariaDB/MySQL
+- PHP >= 7.1
 
 User Roles:
 - Admin (username=admin, password="")
