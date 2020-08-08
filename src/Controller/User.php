@@ -19,7 +19,6 @@
 		public function insert($data){
 			$insert = parent::insert($data);
 			if($insert[0]){
-				$last_id = parent::select("where id = $insert[1]");
 	    		$this->show = true;
 	    		$this->type = 1;
 	    		$this->message = "Data has been added to database!";

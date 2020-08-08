@@ -34,7 +34,6 @@
 		    		$this->show = true;
 		    		$this->type = 1;
 		    		$this->message = "Data has been added to database!";
-		    		print_r($last_id[0]['title']);
 		    		parent::set_log($last_id[0]['title']." post", 1);
 		    	}else{
 		    		$this->show = true;
